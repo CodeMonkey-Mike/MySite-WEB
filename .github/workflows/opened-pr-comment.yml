@@ -1,0 +1,17 @@
+on:
+  pull_request:
+    types: [opened]
+env:
+  PR_NUMBER: ${{ github.event.pull_request.number }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  COMMENTS_URL: ${{ github.event.pull_request.comments_url }}
+jobs:
+  pr-comment-create:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post QA URL as a comment
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${GITHUB_TOKEN}" \
+            -d '{"body": "Test URL: https://qa${{ env.PR_NUMBER }}.mikeneder.me"}' \
+            ${COMMENTS_URL}

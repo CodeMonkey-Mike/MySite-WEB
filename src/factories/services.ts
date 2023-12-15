@@ -1,0 +1,3 @@
+import {IService} from 'interfaces';
+
+export const ServicesFactory:Array<IService> = [{"_id":"56e1341c3780e686a32eedb0","__v":0,"image":"Web-Design-Development.png","name":"Web Application Development"},{"_id":"56e134343780e686a32eedb1","name":"Large-scale Project Management.","image":"Website-Design-Development.png","__v":0},{"_id":"56e1344b3780e686a32eedb2","name":"Lead Generation/Direct Response.","image":"LeadSalesCycleGraphic.png","__v":0},{"_id":"56e1346d3780e686a32eedb3","name":"Conversion Rate Optimization.","image":"shutterstock.png","__v":0},{"_id":"56e1348e3780e686a32eedb4","name":"Project Success!","image":"Brand-Development1.png","__v":0}];
